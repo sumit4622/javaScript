@@ -25,3 +25,49 @@ updatedBrand(car);// Passing the object references to the Function.
 
 //UpadateBrand and model using object with function.
 console.log(car.brand, car.model)
+
+
+
+//constructor
+const multiply = new Function("x","y", "return x * y");
+
+//Declaration
+function multiply(x, y){
+    return x * y;
+}
+
+//Expression; the function is anonymous but assigned to a variable
+const multiply = function (x,y){
+    return x * y;
+};
+
+//Expression; the function have their own name
+const multiply = function(x, y){
+    return x * y;
+};
+
+
+//Arrow function
+const multiply = (x, y) => x * y;
+
+//method
+const obj = {
+    multiply(x, y){
+        return x * y;
+    }
+}
+
+
+
+
+const firstName = function firstName(){
+    var frirstName =  "Sumit";
+    return frirstName;
+};
+
+const lastName = function lastName(){
+    var LastName = "Ray";
+    return LastName;
+};
+
+console.log("hy" + " " + firstName() +" "+ lastName());
