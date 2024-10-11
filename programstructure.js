@@ -83,15 +83,17 @@ const prompt = require("prompt-sync")();
 //   console.log();
 // }
 
-for (i = 1; i <= 8; i++) {
-  var store = "";
-  if (i % 2 === 0) {
-    for (j = 1; j <= 4; j++) {
-      store = "" + store + " " + "#";
-    }
-  } else {
-    for (j = 1; j <= 4; j++) 
-		store = store +"# ";
-  }
-  console.log(store);
-}
+// for (i = 1; i <= 8; i++) {
+//   var store = "";
+//   if (i % 2 === 0) {
+//     for (j = 1; j <= 4; j++) {
+//       store = "" + store + " " + "#";
+//     }
+//   } else {
+//     for (j = 1; j <= 4; j++) 
+// 		store = store +"# ";
+//   }
+//   console.log(store);
+// }
+
+
