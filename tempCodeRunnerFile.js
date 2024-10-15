@@ -1,1 +1,5 @@
-console.log(5+4(4-9)+6)
+const f = function MiniNum(number1, Number2){
+  return(min(number1, Number2));
+};
+
+console.log(f(4, 6));
