@@ -78,8 +78,6 @@ if (true) {
 // let twice = multiplier(2);
 // console.log(twice(5));
 
-
-
 // function findSolution(target) {
 //   function find(current, history) {
 //     if (current === target) {
@@ -97,14 +95,49 @@ if (true) {
 // console.log(findSolution(24));
 // → (((1 * 3) + 5) * 3)
 
-
-
 /*write a function like that ourselves now. Define the function min that takes two arguments and returns their minimum.*/
 
-const min = function MiniNum(number1, Number2){
-  return(Math.min(number1, Number2));
+const min = function MiniNum(number1, Number2) {
+  return Math.min(number1, Number2);
 };
 
 console.log(min(4, 6));
 // => 4
 
+/* 2. We’ve seen that we can use % (the remainder operator) to test whether a number is even  or odd by using % 2 to see whether it’s divisible by two. Here’s another way to define whether a positive whole number is even or odd:
+
+    * Zero is even.
+
+    * One is odd.
+
+    * For any other number N, its evenness is the same as N - 2.
+
+Define a recursive function isEven corresponding to this description. The function should accept a single parameter (a positive, whole number) and return a Boolean.
+
+Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this?
+*/
+
+var isEven = function (N) {
+  if (N == 0) {
+    console.log(`${N} is even`);
+    return true;
+  } else if (N == 1) {
+    console.log(`${N} is  odd`);
+    return false;
+  } else {
+    return isEven(N - 2);
+  }
+
+  isEven();
+};
+
+// console.log(isEven(50));
+// console.log(isEven(75));
+console.log(isEven(-1));
+
+function Minus(a, b = 10) {
+  if (b === undefined) return -a;
+  else return a - b;
+}
+
+console.log(Minus(10, 50));
