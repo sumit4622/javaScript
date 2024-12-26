@@ -1,5 +1,6 @@
-const f = function MiniNum(number1, Number2){
-  return(min(number1, Number2));
-};
+function Minus(a, b = 10) {
+  if (b === undefined) return -a;
+  else return a-b;
+}
 
-console.log(f(4, 6));
+console.log(Minus(10, 50));
