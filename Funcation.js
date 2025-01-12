@@ -1,3 +1,5 @@
+const prompt = require("prompt-sync")({ sigint: true });
+
 function printingName(UserName) {
   console.log(`Welcome ${UserName} how are you.`);
 }
@@ -117,27 +119,150 @@ Define a recursive function isEven corresponding to this description. The functi
 Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this?
 */
 
-var isEven = function (N) {
-  if (N == 0) {
-    console.log(`${N} is even`);
-    return true;
-  } else if (N == 1) {
-    console.log(`${N} is  odd`);
-    return false;
-  } else {
-    return isEven(N - 2);
-  }
+// var isEven = function (N) {
+//   if (N == 0) {
+//     console.log(`${N} is even`);
+//     return true;
+//   } else if (N == 1) {
+//     console.log(`${N} is  odd`);
+//     return false;
+//   } else {
+//     return isEven(N - 2);
+//   }
 
-  isEven();
-};
+//   isEven();
+// };
 
 // console.log(isEven(50));
 // console.log(isEven(75));
-console.log(isEven(-1));
+// console.log(isEven(-1));
 
-function Minus(a, b = 10) {
-  if (b === undefined) return -a;
-  else return a - b;
+// function Minus(a, b = 10) {
+//   if (b === undefined) return -a;
+//   else return a - b;
+// }
+
+// console.log(Minus(10, 50));
+
+/**You can get the Nth character, or letter, from a string by writing [N] after the string (for example, string[2]). The resulting value will be a string containing only one character (for example, "b"). The first character has position 0, which causes the last one to be found at position string.length - 1. In other words, a two-character string has length 2, and its characters have positions 0 and 1.
+
+Write a function called countBs that takes a string as its only argument and returns a number that indicates how many uppercase B characters there are in the string.
+
+// Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase B characters). Rewrite countBs to make use of this new function. */
+
+function countBs(word) {
+  count = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === word[i].toUpperCase()) {
+      count = count + 1;
+    }
+  }
+  return count;
 }
 
-console.log(Minus(10, 50));
+console.log(countBs("BoB"));
+// -> 2
+
+function countChar(w, checking) {
+  count = 0;
+  for (let i = 0; i <= w.length; i++) {
+    if (w[i] === checking) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countChar("KaKKerlaK", "k"));
+//  -> 4
+
+function greeting() {
+  console.log("we are doing Lab 2 this week.");
+}
+greeting();
+
+function greeting2(name) {
+  console.log(`I hope you are doing fine, ${name}`);
+}
+greeting2("sumit");
+
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+console.log(add(2, 4));
+
+function cal_division(num1, num2) {
+  if (Number.isInteger(num1, num2)) {
+    divi = num1 / num2;
+    return `${num1} divided by ${num2} is ${divi.toFixed(2)}`;
+  } else {
+    return `please enter the valid number.`;
+  }
+}
+console.log(cal_division(5, 2));
+
+/*program using function that asks the user to enter a distance in Kilometers, then converts that
+distance to miles. */
+
+function converting(input) {
+  let miles = input * 0.6214;
+  return miles;
+}
+
+function asking() {
+  let Kilometers = prompt("Enter the kilometer to convert into miles.");
+  let miles = converting(Kilometers);
+  console.log(`conversion is here ${miles.toFixed(4)}`);
+}
+
+asking();
+
+function feet_to_inches(feet) {
+  return feet * 12;
+}
+
+function main() {
+  let input = prompt("Enter the number you want to cover into inches");
+  let feet = parseFloat(input)
+  let inches = feet_to_inches(input);
+  console.log(`the ${input} is equal to ${inches}`);
+}
+
+main();
+
+
+const name = 'Sumit';
+const LName = "Ray";
+
+let New_name =(name.concat(LName));
+console.log(New_name.charAt(5));
+
+const FullName = prompt("Enter your full name?");
+length_Of_User = (FullName.length);
+let userName = "@" + FullName + length_Of_User;
+console.log(userName);
+
+
+let superhero = ["sumit ray", "Pramod Ray", "Bipin Ray", "Dipak Ray", "Okil Ray", "Mokil Ray"]
+
+
+// for loop
+
+// for(let i = 0; i <superhero.length; i++) {
+//   console.log(superhero[i]);
+// }
+
+//for of loop
+
+for (let hero of superhero) {
+  console.log(hero);
+}
+
+let marks_Of_Students = [85,97,44,37,76,60]
+sum = 0
+count = 0
+for(let i = 0; i < marks_Of_Students.length; i++) {
+  // sum += marks_Of_Students[i]
+  console.log(i)
+}
+// console.log(sum)
